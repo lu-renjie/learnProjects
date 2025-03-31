@@ -1,0 +1,22 @@
+description: 调参, 让CartPole-v1的reward能到500
+
+# 环境
+env_name: CartPole-v1
+env_name: LunarLander-v2
+gamma: 0.99
+
+# 模型
+hidden_dim: 32
+hidden_num: 2
+activation_fn: sigmoid
+
+# 算法
+epoch_num: 10
+
+# 训练
+max_step: 10_0000  # 训练次数
+lr_critic: 3.e-3
+lr_actor: 3.e-4
+
+# 测试
+test_interval: 1000

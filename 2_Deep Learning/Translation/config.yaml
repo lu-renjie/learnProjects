@@ -1,0 +1,39 @@
+description: 'debug'
+
+# 运行设置
+train?: True
+seed: 0
+log: False
+
+load_trained_model: False
+trained_model_dir: log/LSTM1_512/2022-10-27_12:34:37_debug/model.pth
+
+# 数据
+load_pickle_dataset: True
+batch_size: 32
+
+# word2vec
+train_word2vec: False
+vector_size: 50
+min_count: 1
+freeze: False
+
+# 模型
+hidden_dim: 128
+num_layers: 1
+num_heads: 1
+
+# seq2seq
+max_length: 50
+head_num: 1
+attention: True
+concat: True
+
+# 训练
+device: cpu
+epoch_num: 150
+lr: 0.02
+
+# 测试
+test_set_size: 50
+beam_k: 5  # beam search

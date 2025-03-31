@@ -1,0 +1,46 @@
+description: nothing
+
+
+# 运行设置
+seed: 0
+log: False  # debug的时候设置为False
+# log dir为'./log/MLP_${hidden_dim}_${env_name}/${run_time}_${description}'
+
+# 环境
+env_name: LunarLander-v2
+env_name: CartPole-v1
+num_envs: 4
+gamma: 0.99
+
+# 模型
+hidden_dim: 64
+hidden_num: 2
+activation_fn: tanh
+init_method: orthogonal
+
+# 算法PPO
+use_clipped_loss: True
+clip_eps: 0.2
+GAE_lambda: 0.95
+
+# tricks
+normalize_GAE: True
+use_reward_scaling: True
+max_norm: 0.5  # max gradient norm
+adam_eps: 1.e-5
+
+# loss权重
+loss_weight:
+  value: 1
+  policy: 1
+  entropy: 0.01
+
+# 训练
+max_step: 1_0000
+sample_num: 100
+lr: 0.0003
+epoch_num: 10
+batch_size: 32
+
+# 测试
+test_interval: 1

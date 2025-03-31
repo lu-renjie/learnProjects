@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "makefile": "makefile",
+        "__locale": "c",
+        "stdio.h": "c"
+    }
+}

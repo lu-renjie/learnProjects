@@ -1,0 +1,23 @@
+description: 调参
+
+# 环境
+env_name: Pendulum-v1
+gamma: 0.99
+
+# 模型
+hidden_dim: 64
+hidden_num: 1
+activation_fn: sigmoid
+
+# 算法
+buffer_size: 50000
+sigma: 0.1
+batch_size: 32
+
+# 训练
+max_step: 5_0000
+lr_actor: 0.0003
+lr_critic: 0.0003
+
+# 测试
+test_interval: 1000

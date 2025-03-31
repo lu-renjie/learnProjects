@@ -1,0 +1,19 @@
+description: 可视化
+# 运行设置
+seed: 0
+load_trained_model: True
+trained_model_dir: log/MLP_[512, 128, 16]_[16, 128, 512]_1/2022-12-03_15:19:48_可视化
+
+# 数据
+batch_size: 16
+
+# 模型
+encoder_hidden_dims: [512, 128, 16]
+decoder_hidden_dims: [16, 128, 512]
+latent_dim: 1
+
+# 训练
+epoch_num: 10
+lr: 0.001  # loss是上万的，学习率要小一点
+sigma: 0.03
+L: 1  # z的采样次数
